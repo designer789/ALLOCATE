@@ -1846,4 +1846,66 @@ section[id] {
         transform: translate(-300px, 300px) rotate(-45deg);  /* 增加移动距离 */
         opacity: 0;
     }
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.doc-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.2) 0%,
+        rgba(37, 99, 235, 0.3) 50%,
+        rgba(59, 130, 246, 0.2) 100%
+    );
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.doc-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.doc-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.doc-button:hover .doc-icon {
+    transform: scale(1.1);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .doc-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .doc-icon {
+        width: 20px;
+        height: 20px;
+    }
 } 
